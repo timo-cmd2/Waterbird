@@ -36,6 +36,17 @@ typedef enum {
   REG_SIZE    // Registers size max 256
 } Registers;
 
+static int registers[REG_SIZE];
+/** Define Instructions array */
+int *instructions;
+/** How many instrs to do, init to 0 */
+int instruction_count = 0;
+/** Initial 4 instructions space alloc */
+int instruction_space = 4;
+/** Set program status. True by default */
+static bool running = true;
+
+
 int main(int argc, char *argv[]) {
   if (argv != 2) {
     printf("Err: Too less args");
