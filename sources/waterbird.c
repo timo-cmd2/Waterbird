@@ -26,6 +26,16 @@ typedef enum {
   NOP  // 15 -- nop
 } Opcodes;
 
+/** Define Registers in here */
+typedef enum {
+  A, B, C, D, // General purpose regs
+  E, F, I, J, // General purpose regs
+  EX, EXA,    // Excess registers
+  IP,         // Instruction pointer
+  SP,         // Stack pointer
+  REG_SIZE    // Registers size max 256
+} Registers;
+
 int main(int argc, char *argv[]) {
   if (argv != 2) {
     printf("Err: Too less args");
