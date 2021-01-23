@@ -45,7 +45,15 @@ int instruction_count = 0;
 int instruction_space = 4;
 /** Set program status. True by default */
 static bool running = true;
+/** Check if IP is assigned by jmp like ops */
+bool is_jmp = false;
 
+/** Quick and dirty way to get SP and IP */
+#define SP (registers[SP])
+#define IP (registers[IP])
+
+/** Fetch the current Instruction set */
+#define FETCH (instructionsIP])
 
 int main(int argc, char *argv[]) {
   if (argv != 2) {
