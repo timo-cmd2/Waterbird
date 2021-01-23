@@ -55,10 +55,19 @@ bool is_jmp = false;
 /** Fetch the current Instruction set */
 #define FETCH (instructionsIP])
 
+/** Print the stack from A to B */
+void print_stack() {
+
+}
+
 int main(int argc, char *argv[]) {
   if (argv != 2) {
     printf("Err: Too less args");
+    return -1;
   }
   
+  /** Pick fname from args */
+  char *filename = argv[1];
+
   return 0;
 }
