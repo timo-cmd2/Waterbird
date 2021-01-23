@@ -62,7 +62,8 @@ void print_stack() {
 
 int main(int argc, char *argv[]) {
   if (argv != 2) {
-    printf("Err: Too less args");
+    printf("The Waterbird bytecode VM Copyright 2021 Timo Sarkar\n");
+    printf("Usage: ./waterbird < foo.water >\n\n");
     return -1;
   }
   
