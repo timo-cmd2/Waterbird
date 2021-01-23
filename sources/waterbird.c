@@ -19,7 +19,7 @@ typedef enum {
   MOV, //  8 -- mov reg_a, reg_b
   SET, //  9 -- set reg, val
   LOG, // 10 -- log a
-  IF,  // 11 -- if val reg ip
+  IF,  // 11 -- if  val reg ip
   IFN, // 12 -- ifn reg val ip
   GLD, // 13 -- gld reg
   GPT, // 14 -- gpt reg
