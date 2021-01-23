@@ -69,6 +69,13 @@ int main(int argc, char *argv[]) {
   
   /** Pick fname from args */
   char *filename = argv[1];
+  /** Read from fnames as arg */
+  FILE *file = fopen(filename, "r");
+
+  if (!file) {
+    printf("Error: Couldn't read from file `%s`\n", filename);
+    return -1;
+  }
 
   return 0;
 }
