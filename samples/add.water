@@ -1,0 +1,6 @@
+PUSH    5    ; push 5 on the stack
+PUSH    10   ; push 10 on the stack
+ADD          ; add the two top values of the stack
+POP          ; print the values for debug purposes
+SET     a 0  ; set register a to value 0
+HALT         ; stop the program with exit code 1
