@@ -64,6 +64,42 @@ void print_stack() {
   if (SP != 0) { printf("\n"); }
 }
 
+/** Print the registers all out */
+void print_registers() {
+  printf("Registers dump:\n ");
+  // code to follow
+}
+
+/** Find empty regs in the mem */
+int find_empty_registers() {
+  return EX;
+}
+
+/** Evaluate the bytecode and handle errs */
+void eval(int instr) {
+  is_jmp = false;
+  switch (instr) {
+    case HALT: {
+      running = false;
+      printf("System halted!");
+      break;
+    }
+    case REM: {
+      continue;
+    }
+    case PUSH: {
+      SP = SP + 1;
+      IP = IP + 1;
+      stack[SP] = instructions[IP];
+      break;
+    }
+    default: {
+      printf("Unknown instruction: %d\n", instr);
+      break;
+    }
+}
+
+/** The program entrypoint */
 int main(int argc, char *argv[]) {
   if (argv != 2) {
     printf("The Waterbird bytecode VM Copyright 2021 Timo Sarkar\n");
