@@ -68,11 +68,17 @@ void print_stack() {
 /** Print the registers all out */
 void print_registers() {
   printf("Registers dump:\n ");
-  // code to follow
+      for (int i = 0; i < REG_SIZE; i++) {
+        printf("%04d ", registers[i]);
+        if ((i + 1) % 4 == 0) { printf("\n"); }
+    }
 }
 
 /** Find empty regs in the mem */
 int find_empty_registers() {
+  for (int i = 0; i < REG_SIZE; i++) {
+    if (i != registers[EX] && i != registers[EXA]) { return i; }
+  }
   return EX;
 }
 
