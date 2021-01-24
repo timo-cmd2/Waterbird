@@ -57,7 +57,11 @@ bool is_jmp = false;
 
 /** Print the stack from A to B */
 void print_stack() {
-
+  for (int i = 0; i < SP; i++) {
+    printf("0x%04d ", stack[i]);
+    if ((i + 1) % 4 == 0) { printf("\n"); }
+  }
+  if (SP != 0) { printf("\n"); }
 }
 
 int main(int argc, char *argv[]) {
