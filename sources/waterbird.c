@@ -8,22 +8,22 @@ static int stack[STACK_SIZE];
 
 /** Opcodes defined in this enum */
 typedef enum {
-  HLT, //  0 -- hlt
-  PSH, //  1 -- psh
-  POP, //  2 -- pop
-  ADD, //  3 -- add
-  MUL, //  4 -- mul
-  DIV, //  5 -- div
-  SUB, //  6 -- sub
-  SLT, //  7 -- slt reg_a, reg_b
-  MOV, //  8 -- mov reg_a, reg_b
-  SET, //  9 -- set reg, val
-  LOG, // 10 -- log a
-  IF,  // 11 -- if  val reg ip
-  IFN, // 12 -- ifn reg val ip
-  GLD, // 13 -- gld reg
-  GPT, // 14 -- gpt reg
-  NOP  // 15 -- nop
+  HALT, //  0 -- HALT
+  PUSH, //  1 -- PUSH
+  POP,  //  2 -- POP
+  ADD,  //  3 -- ADD
+  MUL,  //  4 -- MUL
+  DIV,  //  5 -- DIV
+  SUB,  //  6 -- SUB
+  SLTR, //  7 -- SLTR   reg_a, reg_b
+  MOVE, //  8 -- MOVE   reg_a, reg_b
+  SET,  //  9 -- SET    reg, val
+  LOG,  // 10 -- LOG    a
+  IFY,  // 11 -- IFY    val reg ip
+  IFN,  // 12 -- IFN    reg val ip
+  LOAD, // 13 -- LOAD   reg
+  GPT,  // 14 -- GPT    reg
+  NOP   // 15 -- NOP
 } Opcodes;
 
 /** Define Registers in here */
