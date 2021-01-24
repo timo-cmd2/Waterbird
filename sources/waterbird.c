@@ -23,7 +23,8 @@ typedef enum {
   IFN,  // 12 -- IFN    reg val ip
   LOAD, // 13 -- LOAD   reg
   GPT,  // 14 -- GPT    reg
-  NOP   // 15 -- NOP
+  NOP,  // 15 -- NOP
+  REM   // 16 -- REM
 } Opcodes;
 
 /** Define Registers in here */
@@ -94,8 +95,9 @@ void eval(int instr) {
       break;
     }
     default: {
-      printf("Unknown instruction: %d\n", instr);
-      break;
+      continue;
+      /** printf("Unknown instruction: %d\n", instr); */
+      /** break; */
     }
 }
 
