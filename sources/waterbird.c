@@ -54,7 +54,7 @@ bool is_jmp = false;
 #define IP (registers[IP])
 
 /** Fetch the current Instruction set */
-#define FETCH (instructionsIP])
+#define FETCH (instructions[IP])
 
 /** Print the stack from A to B */
 void print_stack() {
